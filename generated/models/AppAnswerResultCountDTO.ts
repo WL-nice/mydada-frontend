@@ -2,8 +2,8 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type TeamJoinRequest = {
-  teamId?: number;
-  password?: string;
+export type AppAnswerResultCountDTO = {
+  resultName?: string;
+  resultCount?: number;
 };
 

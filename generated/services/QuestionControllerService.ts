@@ -2,7 +2,9 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
+import type { AiGenerateQuestionRequest } from "../models/AiGenerateQuestionRequest";
 import type { BaseResponseBoolean } from "../models/BaseResponseBoolean";
+import type { BaseResponseListQuestionContentDTO } from "../models/BaseResponseListQuestionContentDTO";
 import type { BaseResponseLong } from "../models/BaseResponseLong";
 import type { BaseResponsePageQuestion } from "../models/BaseResponsePageQuestion";
 import type { BaseResponsePageQuestionVO } from "../models/BaseResponsePageQuestionVO";
@@ -110,6 +112,22 @@ export class QuestionControllerService {
       query: {
         "id": id
       }
+    });
+  }
+
+  /**
+   * @param requestBody
+   * @returns BaseResponseListQuestionContentDTO OK
+   * @throws ApiError
+   */
+  public static aiGenerateQuestion(
+    requestBody: AiGenerateQuestionRequest
+  ): CancelablePromise<BaseResponseListQuestionContentDTO> {
+    return __request(OpenAPI, {
+      method: "POST",
+      url: "/question/ai_generate",
+      body: requestBody,
+      mediaType: "application/json"
     });
   }
 

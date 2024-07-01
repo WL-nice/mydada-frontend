@@ -104,7 +104,7 @@
 import { defineProps, ref, watchEffect, withDefaults } from "vue";
 import { useRouter } from "vue-router";
 import message from "@arco-design/web-vue/es/message";
-// import AiGenerateQuestionDrawer from "@/views/add/components/AiGenerateQuestionDrawer.vue";
+import AiGenerateQuestionDrawer from "@/views/add/components/AiGenerateQuestionDrawer.vue";
 import {
   QuestionContentDTO,
   QuestionControllerService,
@@ -237,8 +237,8 @@ const handleSubmit = async () => {
 /**
  * AI 生成题目成功后执行
  */
-// const onAiGenerateSuccess = (result: QuestionContentDTO[]) => {
-//   message.success(`AI 生成题目成功，生成 ${result.length} 道题目`);
-//   questionContent.value = [...questionContent.value, ...result];
-// };
+const onAiGenerateSuccess = (result: QuestionContentDTO[]) => {
+  message.success(`AI 生成题目成功，生成 ${result.length} 道题目`);
+  questionContent.value = [...questionContent.value, ...result];
+};
 </script>

@@ -29,7 +29,6 @@
             <a-button type="primary" :href="`/answer/do/${id}`"
               >开始答题
             </a-button>
-            <a-button>分享应用</a-button>
             <a-button v-if="isMy" :href="`/add/question/${id}`"
               >设置题目
             </a-button>

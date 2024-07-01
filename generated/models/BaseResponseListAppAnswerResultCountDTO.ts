@@ -2,11 +2,11 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { Team } from "./Team";
+import type { AppAnswerResultCountDTO } from "./AppAnswerResultCountDTO";
 
-export type BaseResponseTeam = {
+export type BaseResponseListAppAnswerResultCountDTO = {
   code?: number;
-  data?: Team;
+  data?: Array<AppAnswerResultCountDTO>;
   message?: string;
   description?: string;
 };

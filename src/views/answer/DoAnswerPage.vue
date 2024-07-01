@@ -100,7 +100,21 @@ const currentAnswer = ref<string>();
 const answerList = reactive<string[]>([]);
 // 是否正在提交结果
 const submitting = ref(false);
+// 唯一id
+const id = ref<number>();
 
+const generateId = async () => {
+  const res = await UserAnswerControllerService.generateId();
+  if (res.code === 0) {
+    id.value = res.data;
+  } else {
+    message.error("生成唯一id失败，" + res.message);
+  }
+};
+
+watchEffect(() => {
+  generateId();
+});
 /**
  * 加载数据
  */
@@ -160,6 +174,7 @@ const doSubmit = async () => {
   const res = await UserAnswerControllerService.addUserAnswer({
     appId: props.appId as any,
     choices: answerList,
+    id: id.value as any,
   });
   if (res.code === 0 && res.data) {
     router.push(`/answer/result/${res.data}`);

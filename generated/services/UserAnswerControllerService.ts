@@ -128,4 +128,15 @@ export class UserAnswerControllerService {
       mediaType: "application/json"
     });
   }
+
+  /**
+   * @returns BaseResponseLong OK
+   * @throws ApiError
+   */
+  public static generateId(): CancelablePromise<BaseResponseLong> {
+    return __request(OpenAPI, {
+      method: "GET",
+      url: "/userAnswer/generate/id"
+    });
+  }
 }

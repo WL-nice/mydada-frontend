@@ -2,9 +2,9 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type UserAnswerAddRequest = {
-  id?: number;
+export type AiGenerateQuestionRequest = {
   appId?: number;
-  choices?: Array<string>;
+  questionNumber?: number;
+  optionNumber?: number;
 };
 

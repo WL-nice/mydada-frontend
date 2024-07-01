@@ -2,11 +2,11 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { TeamUserVo } from "./TeamUserVo";
+import type { QuestionContentDTO } from "./QuestionContentDTO";
 
-export type BaseResponseListTeamUserVo = {
+export type BaseResponseListQuestionContentDTO = {
   code?: number;
-  data?: Array<TeamUserVo>;
+  data?: Array<QuestionContentDTO>;
   message?: string;
   description?: string;
 };

@@ -2,11 +2,11 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { PageTeam } from "./PageTeam";
+import type { UserAnswerCountDTO } from "./UserAnswerCountDTO";
 
-export type BaseResponsePageTeam = {
+export type BaseResponseListUserAnswerCountDTO = {
   code?: number;
-  data?: PageTeam;
+  data?: Array<UserAnswerCountDTO>;
   message?: string;
   description?: string;
 };

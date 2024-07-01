@@ -2,7 +2,8 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type TeamQuitRequest = {
-  teamId?: number;
+export type UserAnswerCountDTO = {
+  appId?: number;
+  answerCount?: number;
 };
 
